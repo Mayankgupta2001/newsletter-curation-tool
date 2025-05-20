@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Newsletter Curation Tool</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script> tailwind.config = { darkMode: 'class' } </script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body id="mainBody" class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-white">
+
+  <div class="max-w-4xl mx-auto p-6 flex justify-between items-center">
+    <h1 class="text-2xl font-bold">📰 Newsletter Curation Tool</h1>
+    <button id="toggleDark" class="bg-gray-800 text-white px-4 py-2 rounded">Toggle Dark Mode</button>
+  </div>
+
+  <!-- Form -->
+  <div class="max-w-4xl mx-auto p-6 bg-white dark:bg-gray-800 rounded shadow">
+    <form id="newsletterForm" class="space-y-4">
+      <input type="text" id="newsletterTitle" placeholder="Newsletter Title" class="w-full p-2 border rounded dark:bg-gray-700 dark:border-gray-600" required />
+      <div id="linksContainer"></div>
+      <button type="button" id="addLink" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">+ Add Link</button>
+      <button type="submit" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded">Generate Newsletter</button>
+    </form>
+  </div>
+
+  <!-- Preview -->
+  <div class="max-w-4xl mx-auto p-6 mt-6 bg-white dark:bg-gray-800 rounded shadow">
+    <h2 class="text-xl font-bold mb-2">Live Preview</h2>
+    <iframe id="preview" class="w-full h-96 border rounded bg-white"></iframe>
+
+    <div class="text-center mt-4 flex flex-wrap gap-3 justify-center">
+      <button id="copyHtml" class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded shadow-lg">Copy HTML</button>
+      <button id="copyMarkdown" class="bg-pink-600 hover:bg-pink-700 text-white px-6 py-2 rounded shadow-lg">Copy Markdown</button>
+      <button id="downloadBtn" class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded shadow-lg">Download HTML</button>
+      <button id="downloadMarkdown" class="bg-yellow-600 hover:bg-yellow-700 text-white px-6 py-2 rounded shadow-lg">Export as Markdown</button>
+    </div>
+
+    <p id="copyStatus" class="text-center text-green-400 mt-2 hidden">✅ Markdown Copied!</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

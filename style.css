@@ -1,0 +1,40 @@
+/* Smooth transition for dark mode and light mode */
+body {
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+/* Preview iframe style */
+iframe {
+  border-radius: 8px;
+  background: #ffffff;
+  transition: background 0.2s ease;
+}
+
+/* Inputs and Textareas - ensure dark mode visibility */
+input,
+textarea,
+select {
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.dark input,
+.dark textarea,
+.dark select {
+  color: #f3f4f6 !important;
+  background-color: #374151;
+  border-color: #4b5563;
+}
+
+/* Buttons */
+button {
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+  transform: scale(1.02);
+}
+
+/* Copy status animation */
+#copyStatus {
+  transition: opacity 0.3s ease;
+}
